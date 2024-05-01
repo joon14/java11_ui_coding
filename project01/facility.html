@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주요 시설 안내</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="normalize2.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="subject" content="답십리동 소개(Dapsimni Intro)" />
+    <meta name="description" content="답십리동, 맛집, 카페, 교육, 의료" />
+    <meta name="keywords" content="답십리동, 맛집, 카페, 교육, 의료" />
+    <link rel="icon" href="./img/favicon3.png" />
+    <link rel="shortcut icon" href="./img/favicon3.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="dapsimnidong" />
+    <meta property="og:description" content="답십리동, 맛집, 카페, 교육, 의료" />
+    <meta property="og:image" content="${ipath }/images/site.png" />
+    <meta property="og:url" content="http://localhost:8091" />
+
+    <style>
+    #contents { width: 100%; }
+    .page { clear:both; width: 100%; min-height:60vh; }
+    .page:after { content:""; display:block; width:100%; clear:both; }
+    .page_title { text-align: center; padding-top: 2em; 
+        padding-bottom: 0.5em; }
+    .page_wrap { clear:both; width: 100%; margin: 0 auto; }
+
+    #vs { clear:both; width: 100%; height:450px; overflow:hidden; 
+    position:relative; }
+    #vs img { display:block; width: 100%;  height: auto; 
+    position:absolute; top:50%; margin-top:-220px; }
+
+    #ft { width: 100%; }   
+    .ft_wrap { clear:both; width: 100%; margin: 0 auto; } 
+    </style>
+
+    <style>
+    /* 사이드 메뉴 */
+    #left1 { height: 1215px; }  
+    #lnb .menu li .dp2 { border-bottom: 2px solid #89C0DE; }
+    .contents { height: 1215px; }
+
+    #vs { clear:both; width: 100%; text-align: center; 
+    padding-top: 50px; padding-bottom: 50px; }
+    </style>
+
+    <style>
+    /* 탭 */
+    .tab_con { display:none; position:absolute; top:48px; left: 0; }
+    .tab_ra { display:none; }
+    .tab_ra:checked ~ .tab_con { display:block; }
+
+    .ra_item { display:none; }
+    .tab_con_box { display:none; }
+    #ra1:checked ~ .tab_con_wrap #tab_con_box1 { display:block; }
+    #ra2:checked ~ .tab_con_wrap #tab_con_box2 { display:block; }
+    #ra3:checked ~ .tab_con_wrap #tab_con_box3 { display:block; }
+    #ra4:checked ~ .tab_con_wrap #tab_con_box4 { display:block; }
+    #ra5:checked ~ .tab_con_wrap #tab_con_box5 { display:block; }
+
+    #tab2 { /*position:relative;*/ width: 600px; height: 350px; 
+    clear:both; } /* margin : auto로 인해 중앙배치 */
+    .tb_wrap { width: 600px; margin-top: 50px; margin: 40px auto;  /*margin-left: 100px;*/ }
+
+    .btn_box { width: 573px; margin-bottom: 45px; margin-left: 186px; }
+    .btn_box .ra_btn { display:inline-block; width: 110px; 
+    height: 110px; line-height: 40px; text-align: center; background-color:#89C0DE;
+    color:#fff; position: relative; cursor: pointer; }
+
+    .tab_con_wrap { margin-left: 50px; width: 845px; height: 700px; border: 3px solid #89C0DE; border-radius: 20px; }
+    .tab_con_wrap .tab_con_box #img1 { display: inline-block; margin: 30px 30px; width: 400px; height: 300px; position: relative; }
+    .tab_con_wrap .tab_con_box #img2 { display: inline-block; margin: 5px 30px; width: 400px; height: 300px; }
+
+    #ra1:checked ~ .btn_box label:first-child { background-color: #DFB996; }
+    #ra2:checked ~ .btn_box label:nth-child(2) { background-color: #DFB996; }
+    #ra3:checked ~ .btn_box label:nth-child(3) { background-color: #DFB996; }
+    #ra4:checked ~ .btn_box label:nth-child(4) { background-color: #DFB996; }
+    #ra5:checked ~ .btn_box label:last-child { background-color: #DFB996; }
+
+    .ra_btn img {
+        display: block;
+        margin: 0 auto;
+        padding-top: 8px;
+        width: 65px;
+        height: auto;
+    }
+    .ra_btn span { color: #000; font-weight: bold; }
+    .tab_con_box .description1 { display: inline-block; width: 360px; position: absolute; margin-top : 35px; margin-right: 30px; }
+    .tab_con_box .description2 { display: inline-block; width: 360px; position: absolute; margin-top : 10px; margin-right: 30px; }
+    .tab_con_box #map { width: 25px; height: 25px; margin-left: 5px; }
+    .tab_con_box #homepage { width: 25px; height: 25px; margin-left: 5px; }
+    </style>
+</head>
+<body>
+    <header id="hd" class="clr-fix">
+        <div class="menu_img">
+            <a href="index.html">
+                <img src="./img/logo.png" alt="로고" id="logo">
+            </a>
+            <img src="./img/park.png" alt="지역소개" id="intro">
+            <img src="./img/building2.png" alt="이용안내" id="available">
+            <img src="./img/talk.png" alt="커뮤니티" id="community">
+            <img src="./img/location.png" alt="오시는길" id="location">
+            <img src="./img/setting.png" alt="마이페이지" id="setting">
+        </div>
+        <div class="hd_wrap">
+            <div class="wrap clr-fix">
+                <nav id="gnb3">
+                    <ul class="menu">
+                        <li id="blank">
+                            <p>공백</p>
+                        </li>
+                        <li>
+                            <a href="" class="dp1" id="menu1">지역소개</a>
+                            <ul class="sub">
+                                <li><a href="" class="dp2" id="sub1">지명유래</a></li>
+                                <li><a href="" class="dp2" id="sub1">연혁</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="" class="dp1" id="menu2">이용안내</a>
+                            <ul class="sub">
+                                <li><a href="" class="dp2" id="sub2">교통편 안내</a></li>
+                                <li><a href="facility.html" class="dp2" id="sub2">주요 시설 안내</a></li>
+                                <li><a href="" class="dp2" id="sub2">먹거리 안내</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="" class="dp1" id="menu3">커뮤니티</a>
+                            <ul class="sub">
+                                <li><a href="notice.html" class="dp2" id="sub3">공지사항</a></li>
+                                <li><a href="" class="dp2" id="sub3">묻고 답하기</a></li>
+                                <li><a href="" class="dp2" id="sub3">자료실</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="" class="dp1" id="menu4">오시는 길</a>
+                        </li>
+                        <li>
+                            <a href="" class="dp1" id="menu5">마이페이지</a>
+                            <ul class="sub">
+                                <li><a href="" class="dp2" id="sub5">로그인</a></li>
+                                <li><a href="term.html" class="dp2" id="sub5">회원가입</a></li>
+                                <li><a href="" class="dp2" id="sub5">회원약관</a></li>
+                                <li><a href="" class="dp2" id="sub5">개인정보처리방침</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main id="contents" class="clr-fix">
+        <div class="wrap clr-fix">
+            <div class="contents_wrap">
+                <aside id="left1">
+                    <nav id="lnb">
+                        <ul class="menu">
+                            <li>
+                                <a class="dp1">이용안내</a>
+                                <ul class="sub">
+                                    <li><a href="" class="dp2">교통편 안내</a></li>
+                                    <li><a href="facility.html" class="dp2" style="background-color: #AAE0FF;">주요 시설 안내</a></li>
+                                    <li><a href="" class="dp2">먹거리 안내</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </aside>
+                <div class="contents">
+                    <div class="breadcrumb">
+                        <p>
+                            <a href="index.html">HOME</a><a href="">이용안내</a><span style="color:brown">주요 시설 안내</span>
+                        </p>
+                    </div>
+                    <h2 class="title">주요 시설 안내</h2>
+                    <div class="wrap">
+                        <nav id="tab2">
+                            <div class="tb_wrap">
+                                <input type="radio" class="ra_item" name="tb_ra2" id="ra1" checked>
+                                <input type="radio" class="ra_item" name="tb_ra2" id="ra2">
+                                <input type="radio" class="ra_item" name="tb_ra2" id="ra3">
+                                <input type="radio" class="ra_item" name="tb_ra2" id="ra4">
+                                <input type="radio" class="ra_item" name="tb_ra2" id="ra5">
+                                <div class="btn_box">
+                                    <label for="ra1" class="ra_btn">
+                                        <img src="./img/market.png" alt="시장">
+                                        <span>시장</span>
+                                    </label>
+                                    <label for="ra2" class="ra_btn">
+                                        <img src="./img/mart.png" alt="마트/백화점">
+                                        <span>마트/백화점</span>
+                                    </label>
+                                    <label for="ra3" class="ra_btn">
+                                        <img src="./img/school.png" alt="학교">
+                                        <span>학교</span>
+                                    </label>
+                                    <label for="ra4" class="ra_btn">
+                                        <img src="./img/hospital.png" alt="병원">
+                                        <span>병원</span>
+                                    </label>
+                                    <label for="ra5" class="ra_btn">
+                                        <img src="./img/agency.png" alt="기관">
+                                        <span>기관</span>
+                                    </label>
+                                </div>
+                                <div class="tab_con_wrap">
+                                    <div class="tab_con_box" id="tab_con_box1">
+                                        <img src="./img/market_img.jpg" alt="경동시장" id="img1">
+                                        <p class="description1">
+                                            <strong>경동시장</strong>
+                                            <a href="https://url.kr/o2h8gw">
+                                                <img src="./img/map.png" alt="지도" id="map">
+                                            </a>
+                                            <br><br>&nbsp;1995년 현재 경동시장은 대지면적 8,058㎡, 건물연면적 2만 35㎡, 
+                                            점포수 678개 등의 규모이고, 종사자수는 1,100명이다.
+                                            <br>&nbsp;주된 상품은 산채류·인삼·건어물·기타 농수산물 및 생필품이고, 한약재상 역시 매우 번창하여 
+                                            전문시장의 위치를 굳혀가고 있다.
+                                            <br>&nbsp;제기2동의 한약상가는 400여 개의 한의원과 건재상들이 밀집해 있는 한약재의 집산지로, 
+                                            전국 약재의 80%를 공급하고 있다. 
+                                            <br>&nbsp;이처럼 경동시장은 서울의 부심 청량리 인근에 자리잡은 전문재래시장으로, 
+                                            서울은 물론 전국을 대상으로 한 대규모 도소매시장으로 성장하였다.
+                                        </p>
+                                        <img src="./img/market_img2.jpg" alt="답십리 현대시장" id="img2">
+                                        <p class="description2">
+                                            <strong>답십리 현대시장</strong>
+                                            <a href="https://url.kr/yvr8zo">
+                                                <img src="./img/map.png" alt="지도" id="map">
+                                            </a>
+                                            <br><br>&nbsp;1978년 지금의 위치에 개장하여 자리를 지키고 있다.
+                                            <br>&nbsp;당시에는 골목시장으로 불렸는데, 2009년 인정시장으로 등록되면서 현대시장이라는 
+                                            이름을 갖게 되었다. 
+                                            <br>&nbsp;70여 개의 점포가 운영되고 있으며, 답십리와 장안동 지역민들에게 신선하고 질 좋은 제품을 
+                                            제공하고 있다. 
+                                            <br>&nbsp;과일, 채소, 생선 등 식료품과 의류·잡화 등 다양한 품목을 판매하며, 
+                                            시장 내 위치한 곱창 골목이 유명하다. 
+                                            <br>&nbsp;매주 셋째 화요일이 정기 휴일이다.
+                                        </p>
+                                    </div>
+                                    <div class="tab_con_box" id="tab_con_box2">
+                                        <img src="./img/mart_img.png" alt="홈플러스" id="img1">
+                                        <p class="description1">
+                                            <strong>홈플러스</strong>
+                                            <a href="https://url.kr/cv9iw1">
+                                                <img src="./img/map.png" alt="지도" id="map">
+                                            </a>
+                                            <br><br>&nbsp;- 주소 : 서울특별시 동대문구 천호대로 133
+                                            <br><br>&nbsp;- 영업시간 : 10:00~24:00
+                                            <br><br>&nbsp;- 휴무일 : 매 2,4째 주 수요일
+                                            <br><br>&nbsp;- 전화번호 : 02-2173-8000
+                                        </p>
+                                        <img src="./img/lotte.png" alt="롯데백화점" id="img2">
+                                        <p class="description2">
+                                            <strong>롯데백화점</strong>
+                                            <a href="https://url.kr/ba4teq">
+                                                <img src="./img/map.png" alt="지도" id="map">
+                                            </a>
+                                            <a href="https://www.lotteshopping.com/store/main?cstrCd=0004">
+                                                <img src="./img/homepage.png" alt="지도" id="homepage">
+                                            </a>
+                                            <br><br>&nbsp;- 주소 : 서울특별시 동대문구 왕산로 214 (전농동 591-53)
+                                            <br><br>&nbsp;- 영업시간 : 10:30 ~ 20:30
+                                            <br><br>&nbsp;- 전화번호 : 1577-0001
+                                        </p>
+                                    </div>
+                                    <div class="tab_con_box" id="tab_con_box3">
+                                        <img src="./img/school1.jpg" alt="신답초" id="img1">
+                                        <p class="description1">
+                                            <strong>신답초등학교</strong>
+                                            <a href="https://url.kr/5qbnie">
+                                                <img src="./img/map.png" alt="지도" id="map">
+                                            </a>
+                                            <a href="https://shindap.sen.es.kr/">
+                                                <img src="./img/homepage.png" alt="지도" id="homepage">
+                                            </a>
+                                            <br><br>&nbsp;신답초등학교는 대한민국 서울특별시 동대문구에 있는 공립 초등학교이다.
+                                            <br><br>&nbsp;[주소] 서울특별시 동대문구 답십리동 천호대로 177 서울신답초등학교
+                                            <br><br>&nbsp;[전화번호] 02-2212-1459
+                                        </p>
+                                        <img src="./img/school4.webp" alt="숭인중" id="img2">
+                                        <p class="description2">
+                                            <strong>숭인중학교</strong>
+                                            <a href="https://url.kr/zcgxbu">
+                                                <img src="./img/map.png" alt="지도" id="map">
+                                            </a>
+                                            <a href="https://soongin.sen.ms.kr/">
+                                                <img src="./img/homepage.png" alt="지도" id="homepage">
+                                            </a>
+                                            <br><br>&nbsp;숭인중학교는 대한민국 서울특별시 동대문구 답십리동에 있는 공립 중학교이다.
+                                            <br><br>&nbsp;[주소] 서울특별시 동대문구 천호대로47길 34
+                                            <br><br>&nbsp;[전화번호] 02-2215-0176
+                                        </p>
+                                    </div>
+                                    <div class="tab_con_box" id="tab_con_box4">
+                                        <img src="./img/hos_img1.jpg" alt="병원1" id="img1">
+                                        <p class="description1">
+                                            <strong>하늘병원</strong>
+                                            <a href="https://url.kr/v6airh">
+                                                <img src="./img/map.png" alt="지도" id="map">
+                                            </a>
+                                            <br><br>&nbsp;[주소] 서울특별시 동대문구 천호대로 317
+                                            <br><br>&nbsp;[전화번호] 1544-7588
+                                        </p>
+                                        <img src="./img/hos_img2.webp" alt="병원2" id="img2">
+                                        <p class="description2">
+                                            <strong>하얀나라피부과</strong>
+                                            <a href="https://url.kr/1hbc75">
+                                                <img src="./img/map.png" alt="지도" id="map">
+                                            </a>
+                                            <br><br>&nbsp;[주소] 서울특별시 동대문구 전농로 102
+                                            <br><br>&nbsp;[전화번호] 02-2244-7582
+                                        </p>
+                                    </div>
+                                    <div class="tab_con_box" id="tab_con_box5">
+                                        <img src="./img/library.jpg" alt="답십리도서관" id="img1">
+                                        <p class="description1">
+                                            <strong>동대문구 답십리도서관</strong>
+                                            <a href="https://url.kr/gvw89f">
+                                                <img src="./img/map.png" alt="지도" id="map">
+                                            </a>
+                                            <a href="https://www.l4d.or.kr/dsn/index.do">
+                                                <img src="./img/homepage.png" alt="지도" id="homepage">
+                                            </a>
+                                            <br><br>&nbsp;동대문구 답십리도서관은 서울특별시 동대문구에 위치한 공공 도서관이다.
+                                            <br><br>&nbsp;[주소] 서울특별시 동대문구 답십리동 서울시립대로4길
+                                            <br><br>&nbsp;[전화번호] 02-982-1959
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer id="ft" class="clr-fix">
+        <div class="ft_wrap">
+            <nav id="fnb">
+                <ul class="fl">
+                    <li><a href="">회원약관</a></li>
+                    <li><a href="">개인정보처리방침</a></li>
+                </ul>
+                <ul class="fr">
+                    <li><a href="https://www.ddm.go.kr/www/index.do">동대문구청</a></li>
+                    <li><a href="https://www.ddm.go.kr/health/index.do">동대문구 보건소</a></li>
+                    <li><a href="https://www.smpa.go.kr/home/homeIndex.do?menuCode=ddm">서울 동대문경찰서</a></li>
+                </ul>
+                <ul class="copy">
+                    
+                    <li class="tel">
+                        대표전화 : 02-2127-4114, 4300, 5000(120 다산콜센터로 연결) | 02-2127-4000(야간, 공휴일/당직실), FAX : 02-2127-5096
+                    </li>
+                    <li class="addr">[02565]서울시 동대문구 천호대로 145(용두동) 답십리동 소개</li>
+                    <li class="copyright">COPYRIGHT(C) SEOUL DAPSIMNI INTRO. ALL RIGHTS RESERVED.</li>
+                    
+                </ul>
+            </nav>
+            <hr>
+            <!--
+            <div class="copy">
+                <p class="copyright">COPYRIGHT(C) SEOUL DAPSIMNI INTRO. ALL RIGHTS RESERVED.</p>
+                <p class="addr">[02565]서울시 동대문구 천호대로 145(용두동) 답십리동 소개</p>
+                <p class="tel">대표전화 : 02-2127-4114, 4300, 5000(120 다산콜센터로 연결) | 02-2127-4000(야간, 공휴일/당직실), FAX : 02-2127-5096
+                    <a href="https://www.google.com/maps/search/%EA%B0%80%EC%82%B0%EB%8F%99+128-14+%EC%A7%80%EB%8F%84?entry=ttu" target="_blank">오시는 길</a>
+                </p>
+            </div>
+            -->
+        </div>
+    </footer>
+</body>
+</html>

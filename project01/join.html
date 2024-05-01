@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="normalize2.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="subject" content="답십리동 소개(Dapsimni Intro)" />
+    <meta name="description" content="답십리동, 맛집, 카페, 교육, 의료" />
+    <meta name="keywords" content="답십리동, 맛집, 카페, 교육, 의료" />
+    <link rel="icon" href="./img/favicon3.png" />
+    <link rel="shortcut icon" href="./img/favicon3.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="dapsimnidong" />
+    <meta property="og:description" content="답십리동, 맛집, 카페, 교육, 의료" />
+    <meta property="og:image" content="${ipath }/images/site.png" />
+    <meta property="og:url" content="http://localhost:8091" />
+
+    <style>
+    #contents { width: 100%; }
+    .page { clear:both; width: 100%; min-height:60vh; }
+    .page:after { content:""; display:block; width:100%; clear:both; }
+    .page_title { text-align: center; padding-top: 2em; 
+        padding-bottom: 0.5em; }
+    .page_wrap { clear:both; width: 100%; margin: 0 auto; }
+
+    #vs { clear:both; width: 100%; height:450px; overflow:hidden; 
+    position:relative; }
+    #vs img { display:block; width: 100%;  height: auto; 
+    position:absolute; top:50%; margin-top:-220px; }
+
+    #ft { width: 100%; }   
+    .ft_wrap { clear:both; width: 100%; margin: 0 auto; } 
+    </style>
+
+    <style>
+    /* 사이드 메뉴 */
+    #left1 { height: 1215px; }  
+    #lnb .menu li .dp2 { border-bottom: 2px solid #9A9A97; }
+    .contents { height: 1215px; }
+
+    #vs { clear:both; width: 100%; text-align: center; 
+    padding-top: 50px; padding-bottom: 50px; }
+    </style>
+
+    <style>
+    /* 회원가입 */
+    .box { margin-left: 50px; margin-top: 45px; width: 845px; height: 900px; border: 3px solid #9A9A97; border-radius: 20px; }
+    textarea { width: 645px; height: 300px; overflow-y: auto; resize: none; 
+    margin-top: 20px; margin-left: 100px; background-color: #F5F5F5; position: relative; }
+    .term-html { margin-top: 25px; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <header id="hd" class="clr-fix">
+        <div class="menu_img">
+            <a href="index.html">
+                <img src="./img/logo.png" alt="로고" id="logo">
+            </a>
+            <img src="./img/park.png" alt="지역소개" id="intro">
+            <img src="./img/building2.png" alt="이용안내" id="available">
+            <img src="./img/talk.png" alt="커뮤니티" id="community">
+            <img src="./img/location.png" alt="오시는길" id="location">
+            <img src="./img/setting.png" alt="마이페이지" id="setting">
+        </div>
+        <div class="hd_wrap">
+            <div class="wrap clr-fix">
+                <nav id="gnb3">
+                    <ul class="menu">
+                        <li id="blank">
+                            <p>공백</p>
+                        </li>
+                        <li>
+                            <a href="" class="dp1" id="menu1">지역소개</a>
+                            <ul class="sub">
+                                <li><a href="" class="dp2" id="sub1">지명유래</a></li>
+                                <li><a href="" class="dp2" id="sub1">연혁</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="" class="dp1" id="menu2">이용안내</a>
+                            <ul class="sub">
+                                <li><a href="" class="dp2" id="sub2">교통편 안내</a></li>
+                                <li><a href="facility.html" class="dp2" id="sub2">주요 시설 안내</a></li>
+                                <li><a href="" class="dp2" id="sub2">먹거리 안내</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="" class="dp1" id="menu3">커뮤니티</a>
+                            <ul class="sub">
+                                <li><a href="notice.html" class="dp2" id="sub3">공지사항</a></li>
+                                <li><a href="" class="dp2" id="sub3">묻고 답하기</a></li>
+                                <li><a href="" class="dp2" id="sub3">자료실</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="" class="dp1" id="menu4">오시는 길</a>
+                        </li>
+                        <li>
+                            <a href="" class="dp1" id="menu5">마이페이지</a>
+                            <ul class="sub">
+                                <li><a href="" class="dp2" id="sub5">로그인</a></li>
+                                <li><a href="term.html" class="dp2" id="sub5">회원가입</a></li>
+                                <li><a href="" class="dp2" id="sub5">회원약관</a></li>
+                                <li><a href="" class="dp2" id="sub5">개인정보처리방침</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main id="contents" class="clr-fix">
+        <div class="wrap clr-fix">
+            <div class="contents_wrap">
+                <aside id="left1">
+                    <nav id="lnb">
+                        <ul class="menu">
+                            <li>
+                                <a class="dp1">마이페이지</a>
+                                <ul class="sub">
+                                    <li><a href="" class="dp2">로그인</a></li>
+                                    <li><a href="term.html" class="dp2" style="background-color: #D9D9D9;">회원가입</a></li>
+                                    <li><a href="" class="dp2">회원약관</a></li>
+                                    <li><a href="" class="dp2">개인정보처리방침</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </aside>
+                <div class="contents">
+                    <div class="breadcrumb">
+                        <p>
+                            <a href="index.html">HOME</a><a href="">마이페이지</a><span style="color:brown">회원가입</span>
+                        </p>
+                    </div>
+                    <h2 class="title">회원가입</h2>
+                    <div class="box">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer id="ft" class="clr-fix">
+        <div class="ft_wrap">
+            <nav id="fnb">
+                <ul class="fl">
+                    <li><a href="">회원약관</a></li>
+                    <li><a href="">개인정보처리방침</a></li>
+                </ul>
+                <ul class="fr">
+                    <li><a href="https://www.ddm.go.kr/www/index.do">동대문구청</a></li>
+                    <li><a href="https://www.ddm.go.kr/health/index.do">동대문구 보건소</a></li>
+                    <li><a href="https://www.smpa.go.kr/home/homeIndex.do?menuCode=ddm">서울 동대문경찰서</a></li>
+                </ul>
+                <ul class="copy">
+                    
+                    <li class="tel">
+                        대표전화 : 02-2127-4114, 4300, 5000(120 다산콜센터로 연결) | 02-2127-4000(야간, 공휴일/당직실), FAX : 02-2127-5096
+                    </li>
+                    <li class="addr">[02565]서울시 동대문구 천호대로 145(용두동) 답십리동 소개</li>
+                    <li class="copyright">COPYRIGHT(C) SEOUL DAPSIMNI INTRO. ALL RIGHTS RESERVED.</li>
+                    
+                </ul>
+            </nav>
+            <hr>
+            <!--
+            <div class="copy">
+                <p class="copyright">COPYRIGHT(C) SEOUL DAPSIMNI INTRO. ALL RIGHTS RESERVED.</p>
+                <p class="addr">[02565]서울시 동대문구 천호대로 145(용두동) 답십리동 소개</p>
+                <p class="tel">대표전화 : 02-2127-4114, 4300, 5000(120 다산콜센터로 연결) | 02-2127-4000(야간, 공휴일/당직실), FAX : 02-2127-5096
+                    <a href="https://www.google.com/maps/search/%EA%B0%80%EC%82%B0%EB%8F%99+128-14+%EC%A7%80%EB%8F%84?entry=ttu" target="_blank">오시는 길</a>
+                </p>
+            </div>
+            -->
+        </div>
+    </footer>
+    <script>
+    var ck_item1 = document.getElementById("check_item1");
+    var ck_item2 = document.getElementById("check_item2");
+    var sw = 1;
+    function all_check(){
+        if(sw==1){
+            check_item1.checked = true;
+            check_item2.checked = true;
+            sw = 0;
+        } else {
+            check_item1.checked = false;
+            check_item2.checked = false;
+            sw = 1;
+        }
+    }
+    function term_check(){
+        if(check_item1.checked && check_item2.checked){
+            location.href = "${path0 }/Join.do";
+        } else {
+            alert("회원 약관 및 개인정보처리 방침에 동의하지 않으셨습니다.");
+            return;
+        }
+    }
+    </script>
+</body>
+</html>

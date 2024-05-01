@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="subject" content="답십리동 소개(Dapsimni Intro)" />
+    <meta name="description" content="답십리동, 맛집, 카페, 교육, 의료" />
+    <meta name="keywords" content="답십리동, 맛집, 카페, 교육, 의료" />
+    <link rel="icon" href="./img/favicon3.png" />
+    <link rel="shortcut icon" href="./img/favicon3.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="dapsimnidong" />
+    <meta property="og:description" content="답십리동, 맛집, 카페, 교육, 의료" />
+    <meta property="og:image" content="${ipath }/images/site.png" />
+    <meta property="og:url" content="http://localhost:8091" />
+
+    <style>
+    * { margin: 0; padding: 0; }
+    body { width:100%; overflow-x:hidden; }
+    ul { list-style: none; }
+    a { text-decoration: none; }
+    .clr-fix { clear:both; }
+    .clr-fix:after { content:""; display:block; width:100%; clear:both;}
+
+    #hd { width: 100%; height: 200px; position:relative; }
+    .hd_wrap { clear:both; width: 100%; margin: 0 auto; }
+
+    #contents { width: 100%; height: 1000px;}
+    .page { clear:both; width: 100%; min-height:60vh; }
+    .page:after { content:""; display:block; width:100%; clear:both; }
+    .page_title { text-align: center; padding-top: 2em; 
+        padding-bottom: 0.5em; }
+    .page_wrap { clear:both; width: 100%; margin: 0 auto; }
+
+    #vs { clear:both; width: 100%; height:450px; overflow:hidden; 
+    position:relative; }
+    #vs img { display:block; width: 100%;  height: auto; 
+    position:absolute; top:50%; margin-top:-220px; }
+
+    #ft { width: 100%; z-index:999; }   
+    .ft_wrap { clear:both; width: 100%; margin: 0 auto; } 
+    </style>
+
+    <style>
+    /* 헤더상단 이미지 */
+    .clr-fix img#logo { width: auto; height: 150px; z-index: 999; margin-left: 60px; position: absolute; margin-top: 10px;}
+    .clr-fix img#intro { width: 130px; height: 130px; z-index: 95; margin-left: 554px; position: absolute; margin-top: 9px; }
+    .clr-fix img#available { width: 130px; height: 130px; z-index: 95; margin-left: 754px; position: absolute; margin-top: 12px; }
+    .clr-fix img#community { width: 130px; height: 130px; z-index: 95; margin-left: 959px; position: absolute; margin-top: 9px; }
+    .clr-fix img#location { width: 130px; height: 130px; z-index: 95; margin-left: 1154px; position: absolute; margin-top: 10px; }
+    .clr-fix img#setting { width: 130px; height: 130px; z-index: 90; margin-left: 1354px; position: absolute; margin-top: 8px; }
+    </style>
+
+    <style>
+    /* 메인메뉴 */    
+    #gnb3 { clear:both; width: 100%; position:absolute;  z-index:100; margin-top: 135px; }
+    #gnb3 > .menu > li { float:left; width: 200px; text-align: center; }
+    #gnb3 li#blank { width:519.2px; }
+    #gnb3 p { margin-right: 150px; width: 1600px; line-height: 70px; background-color:#AE7642; color:#AE7642}
+    #gnb3 a { font-weight: bold; }
+    #gnb3 a.dp1 { background-color: #AE7642; color:#fff; display:block; line-height: 70px; font-size: 20px; }
+    #gnb3 .sub { display:none; }
+    #gnb3 a.dp2 { color: black; line-height: 70px; font-size: 17px; }
+    
+    #gnb3 .menu li:hover .sub { display:block; background-color:palevioletred; }
+
+    #gnb3 li:hover a.dp1#menu1  { background-color:#A2C16E; color: #000; }
+    #gnb3 li:hover a.dp1#menu2  { background-color:#89C0DE; color: #000; }
+    #gnb3 li:hover a.dp1#menu3  { background-color:#DFB996; color: #000; }
+    #gnb3 li:hover a.dp1#menu4  { background-color:#FF9898; color: #000; }
+    #gnb3 li:hover a.dp1#menu5  { background-color:#D9D9D9; color: #000; }
+    </style>
+
+    <style>
+    /* 2단 메뉴 공통 */    
+    .sub li a { color:#fff; }
+    
+    .sub li:hover #sub1 { display: block; color : brown; }
+    .sub li:hover #sub2 { display: block; color: brown; }
+    .sub li:hover #sub3 { display: block; color: brown; }
+    .sub li:hover #sub5 { display: block; color: brown; }
+
+    #gnb3 .menu li:hover .sub a.dp2#sub1 { display: block; background-color: #CAF18A; border-top: 2px solid #A2C16E; }
+    #gnb3 .menu li:hover a.dp2#sub2 { display: block; background-color: #AAE0FF; border-top: 2px solid #89C0DE; }
+    #gnb3 .menu li:hover a.dp2#sub3 { display: block; background-color: #FBE5CC; border-top: 2px solid #DFB996; }
+    #gnb3 .menu li:hover a.dp2#sub5 { display: block; background-color: #F5F5F5; border-top: 2px solid #D9D9D9; }
+    </style>
+
+    <style>
+    /* 사이드 메뉴 */
+    #left1 { float:left; width: 253px; min-height:100vh;
+        box-sizing: border-box; }  
+    /*#lnb { margin-top: 71.2px; }*/
+    /*#lnb .menu { margin-top: 200px; }*/      
+    #lnb > .menu > li { line-height: 70px; }
+    #lnb .menu li .dp1 { background-color: #DFB996;}
+    #lnb .menu li .dp2 { border-bottom: 2px solid #9A9A97; }
+    #lnb a.dp1 { display: block; color:#000; font-size:20px; font-weight:bold; text-align: center; }
+    /*#lnb li .sub { height:0; overflow:hidden; transition:0.8s; }*/
+    /*#lnb .sub li { padding-left: 28px; }*/
+    #lnb .sub li a.dp2 { display: block; color:#000; font-size:20px; font-weight: bold; text-align: center; }
+    #lnb .sub a:hover { text-decoration: underline; }
+    .contents { float:right; width:calc(100vw - 270px); 
+    box-sizing: border-box; min-height:150vh;         
+    border-left:2px solid #000;  }
+    #vs { clear:both; width: 100%; text-align: center; 
+        padding-top: 50px; padding-bottom: 50px; }
+    .breadcrumb { clear:both; border-bottom:2px solid #000; 
+    padding-top: 24px; padding-bottom: 24px; text-align: right; 
+    box-sizing:border-box;  padding-right: 40px;   }
+    .breadcrumb p * { padding:0px 7px; color:#000; font-weight:bold; }
+    .breadcrumb p a:after { content:">"; padding-left: 14px; }
+
+    .title { margin-left: 100px; margin-top: 100px; }
+    .contents h2 { font-weight: bold; font-size: 30px; padding-bottom: 30px; }
+    </style>
+
+    <style>
+    /* 회원가입/로그인 창 CSS */
+    .login-wrap{
+    margin:0;
+    color:gray;
+    background:#c8c8c8;
+    font:600 16px/18px 'Open Sans',sans-serif;
+    }
+    *,:after,:before{box-sizing:border-box}
+    .clearfix:after,.clearfix:before{content:'';display:table}
+    .clearfix:after{clear:both;display:block}
+    a{color:inherit;text-decoration:none}
+
+    .login-wrap{
+    width:100%;
+    margin:auto;
+    max-width:1000px;
+    min-height:670px;
+    position:relative;
+    /*background:url(https://raw.githubusercontent.com/khadkamhn/day-01-login-form/master/img/bg.jpg) no-repeat center;*/
+    box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+    }
+    .login-html{
+    width:100%;
+    height:100%;
+    position:absolute;
+    padding:65px 70px 50px 70px;
+    background:#D9D9D9;
+    }
+    .login-html .sign-in-htm,
+    .login-html .sign-up-htm{
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    position:absolute;
+    transform:rotateY(180deg);
+    backface-visibility:hidden;
+    transition:all .4s linear;
+    }
+    .login-html .sign-in,
+    .login-html .sign-up,
+    .login-form .group .check{
+    display:none;
+    }
+    .login-html .tab,
+    .login-form .group .label,
+    .login-form .group .button{
+    text-transform:uppercase;
+    }
+    .login-html .tab{
+    font-size:22px;
+    margin-right:15px;
+    padding-bottom:5px;
+    margin:0 15px 10px 0;
+    display:inline-block;
+    border-bottom:2px solid transparent;
+    }
+    .login-html .sign-in:checked + .tab,
+    .login-html .sign-up:checked + .tab{
+    color:#000;
+    border-color:#1161ee;
+    padding-bottom: 10px;
+    }
+    .login-form{
+    margin-left : 120px;
+    margin-right: 120px;
+    min-height:345px;
+    position:relative;
+    perspective:1000px;
+    transform-style:preserve-3d;
+    }
+    .login-form .sign-in-htm, .sign-up-htm {
+    padding-top: 20px;
+    padding-left:90px;
+    }
+    .login-form .group{
+    margin-bottom:15px;
+    }
+    .login-form .group .label,
+    .login-form .group .input,
+    .login-form .group .button{
+    width:80%;
+    color:#fff;
+    display:block;
+    font-size: 17px;
+    font-weight: bold;
+    }
+    .login-form .group .input,
+    .login-form .group .button{
+    border:none;
+    padding:15px 20px;
+    border-radius:25px;
+    background:#fff;
+    }
+    .login-form .group input[data-type="password"]{
+    /*text-security:circle;*/
+    -webkit-text-security:circle;
+    }
+    .login-form .group .label{
+    color:#000;
+    font-size:15px;
+    }
+    .login-form .group .button{
+    background:#1161ee;
+    cursor: pointer;
+    }
+    .login-form .group label .icon{
+    width:15px;
+    height:15px;
+    border-radius:2px;
+    position:relative;
+    display:inline-block;
+    background:#fff;
+    }
+    .login-form .group label .icon:before,
+    .login-form .group label .icon:after{
+    content:'';
+    width:10px;
+    height:2px;
+    background:#fff;
+    position:absolute;
+    transition:all .2s ease-in-out 0s;
+    }
+    .login-form .group label .icon:before{
+    left:3px;
+    width:5px;
+    bottom:6px;
+    transform:scale(0) rotate(0);
+    }
+    .login-form .group label .icon:after{
+    top:6px;
+    right:0;
+    transform:scale(0) rotate(0);
+    }
+    .login-form .group .check:checked + label{
+    color:#000;
+    }
+    .login-form .group .check:checked + label .icon{
+    background:#1161ee;
+    cursor: pointer;
+    }
+    .login-form .group .check:checked + label .icon:before{
+    transform:scale(1) rotate(45deg);
+    }
+    .login-form .group .check:checked + label .icon:after{
+    transform:scale(1) rotate(-45deg);
+    }
+    .login-html .sign-in:checked + .tab + .sign-up + .tab + .login-form .sign-in-htm{
+    transform:rotate(0);
+    }
+    .login-html .sign-up:checked + .tab + .login-form .sign-up-htm{
+    transform:rotate(0);
+    }
+    .hr{
+    height:2px;
+    margin-top: 10px; margin-bottom: 10px;
+    background:rgba(255,255,255,.2);
+    }
+    .foot-lnk{
+    text-align:center;
+    }
+    </style>
+
+    <style>
+    /* 푸터 메뉴 */    
+    .contents2 { clear:both; width: 100%;   
+        box-sizing: border-box; min-height:50vh; }
+    .ft { clear:both; width: 100%; padding-top:3px; padding-bottom: 20px; }
+    .ft_wrap { height: 150px; background-color: #000; }
+    #fnb { clear:both; width:100%; height:180.8px; padding:40px 10px; line-height: 42px; 
+    border-bottom:1px solid #ccc; background-color:#000; }
+    #fnb:after { content:""; display:block; width: 100%; clear: both; }
+    #fnb ul li { float:left; padding:0px 10px; }
+    #fnb ul.fl { float:left; }
+    #fnb ul.fr { float:right; }
+    #fnb ul li a { color:#fff; font-size:16px; }
+    #fnb ul.fl li:last-child a:after { content:""; }
+    #fnb ul.fr li:first-child a:before { content:""; }
+    #fnb ul.fl li:nth-child(1) a { padding-left: 24px; }
+    #fnb ul.fr li:nth-child(3) a { padding-right : 50px; }
+    #fnb ul li:hover a { color:cornflowerblue; }
+    #fnb ul.fl li:hover:last-child a:after { content:""; }
+    #fnb ul.fr li:hover:first-child a:before { content:""; } 
+    .copy { padding:24px; line-height: 24px; color: #fff; }
+    </style>
+</head>
+<body>
+    <header id="hd" class="clr-fix">
+        <div class="menu_img">
+            <a href="index.html">
+                <img src="./img/logo.png" alt="로고" id="logo">
+            </a>
+            <img src="./img/park.png" alt="지역소개" id="intro">
+            <img src="./img/building2.png" alt="이용안내" id="available">
+            <img src="./img/talk.png" alt="커뮤니티" id="community">
+            <img src="./img/location.png" alt="오시는길" id="location">
+            <img src="./img/setting.png" alt="마이페이지" id="setting">
+        </div>
+        <div class="hd_wrap">
+            <div class="wrap clr-fix">
+                <nav id="gnb3">
+                    <ul class="menu">
+                        <li id="blank">
+                            <p>공백</p>
+                        </li>
+                        <li>
+                            <a href="" class="dp1" id="menu1">지역소개</a>
+                            <ul class="sub">
+                                <li><a href="" class="dp2" id="sub1">지명유래</a></li>
+                                <li><a href="" class="dp2" id="sub1">연혁</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="" class="dp1" id="menu2">이용안내</a>
+                            <ul class="sub">
+                                <li><a href="" class="dp2" id="sub2">교통편 안내</a></li>
+                                <li><a href="facility.html" class="dp2" id="sub2">주요 시설 안내</a></li>
+                                <li><a href="" class="dp2" id="sub2">먹거리 안내</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="" class="dp1" id="menu3">커뮤니티</a>
+                            <ul class="sub">
+                                <li><a href="notice.html" class="dp2" id="sub3">공지사항</a></li>
+                                <li><a href="" class="dp2" id="sub3">묻고 답하기</a></li>
+                                <li><a href="" class="dp2" id="sub3">자료실</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="" class="dp1" id="menu4">오시는 길</a>
+                        </li>
+                        <li>
+                            <a href="" class="dp1" id="menu5">마이페이지</a>
+                            <ul class="sub">
+                                <li><a href="join.html" class="dp2" id="sub5">로그인/회원가입</a></li>
+                                <li><a href="" class="dp2" id="sub5">회원약관</a></li>
+                                <li><a href="" class="dp2" id="sub5">개인정보처리방침</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main id="contents" class="clr-fix">
+        <div class="wrap clr-fix">
+            <aside id="left1">
+                <nav id="lnb">
+                    <ul class="menu">
+                        <li>
+                            <a class="dp1">마이페이지</a>
+                            <ul class="sub">
+                                <li><a href="join.html" class="dp2" style="background-color: #D9D9D9;">로그인/회원가입</a></li>
+                                <li><a href="" class="dp2">회원약관</a></li>
+                                <li><a href="" class="dp2">개인정보처리방침</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+            <div class="contents">
+                <div class="breadcrumb">
+                    <p>
+                        <a href="index.html">HOME</a><a href="">마이페이지</a><span style="color:brown">로그인/회원가입</span>
+                    </p>
+                </div>
+                <h2 class="title">로그인/회원가입</h2>
+                <div class="login-wrap">
+                    <div class="login-html">
+                        <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">로그인</label>
+                        <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">회원가입</label>
+                        <div class="login-form">
+                            <div class="sign-in-htm">
+                                <div class="group">
+                                    <label for="user1" class="label">아이디</label><br>
+                                    <input id="user1" type="text" class="input">
+                                </div>
+                                <div class="group">
+                                    <label for="pass1" class="label">비밀번호</label><br>
+                                    <input id="pass1" type="password" class="input" data-type="password">
+                                </div>
+                                <div class="group">
+                                    <input id="check" type="checkbox" class="check" checked>
+                                    <label for="check"><span class="icon"></span> 로그인 유지</label>
+                                </div>
+                                <div class="group">
+                                    <input type="submit" class="button" value="로그인">
+                                </div>
+                            </div>
+                            <div class="sign-up-htm">
+                                <div class="group">
+                                    <label for="user2" class="label">아이디</label><br>
+                                    <input id="user2" type="text" class="input">
+                                </div>
+                                <div class="group">
+                                    <label for="pass2" class="label">비밀번호</label><br>
+                                    <input id="pass2" type="password" class="input" data-type="password">
+                                </div>
+                                <div class="group">
+                                    <label for="pass3" class="label">비밀번호 확인</label><br>
+                                    <input id="pass3" type="password" class="input" data-type="password">
+                                </div>
+                                <div class="group">
+                                    <label for="pass4" class="label">이메일</label><br>
+                                    <input id="pass4" type="email" class="input">
+                                </div>
+                                <div class="group">
+                                    <input type="submit" class="button" value="회원가입">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer id="ft" class="clr-fix">
+        <div class="ft_wrap">
+            <nav id="fnb">
+                <ul class="fl">
+                    <li><a href="">회원약관</a></li>
+                    <li><a href="">개인정보처리방침</a></li>
+                </ul>
+                <ul class="fr">
+                    <li><a href="https://www.ddm.go.kr/www/index.do">동대문구청</a></li>
+                    <li><a href="https://www.ddm.go.kr/health/index.do">동대문구 보건소</a></li>
+                    <li><a href="https://www.smpa.go.kr/home/homeIndex.do?menuCode=ddm">서울 동대문경찰서</a></li>
+                </ul>
+                <ul class="copy">
+                    
+                    <li class="tel">
+                        대표전화 : 02-2127-4114, 4300, 5000(120 다산콜센터로 연결) | 02-2127-4000(야간, 공휴일/당직실), FAX : 02-2127-5096
+                    </li>
+                    <li class="addr">[02565]서울시 동대문구 천호대로 145(용두동) 답십리동 소개</li>
+                    <li class="copyright">COPYRIGHT(C) SEOUL DAPSIMNI INTRO. ALL RIGHTS RESERVED.</li>
+                    
+                </ul>
+            </nav>
+            <hr>
+            <!--
+            <div class="copy">
+                <p class="copyright">COPYRIGHT(C) SEOUL DAPSIMNI INTRO. ALL RIGHTS RESERVED.</p>
+                <p class="addr">[02565]서울시 동대문구 천호대로 145(용두동) 답십리동 소개</p>
+                <p class="tel">대표전화 : 02-2127-4114, 4300, 5000(120 다산콜센터로 연결) | 02-2127-4000(야간, 공휴일/당직실), FAX : 02-2127-5096
+                    <a href="https://www.google.com/maps/search/%EA%B0%80%EC%82%B0%EB%8F%99+128-14+%EC%A7%80%EB%8F%84?entry=ttu" target="_blank">오시는 길</a>
+                </p>
+            </div>
+            -->
+        </div>
+    </footer>
+    <script>
+    var ck_item1 = document.getElementById("check_item1");
+    var ck_item2 = document.getElementById("check_item2");
+    var sw = 1;
+    function all_check(){
+        if(sw==1){
+            check_item1.checked = true;
+            check_item2.checked = true;
+            sw = 0;
+        } else {
+            check_item1.checked = false;
+            check_item2.checked = false;
+            sw = 1;
+        }
+    }
+    function term_check(){
+        if(check_item1.checked && check_item2.checked){
+            location.href = "${path0 }/Join.do";
+        } else {
+            alert("회원 약관 및 개인정보처리 방침에 동의하지 않으셨습니다.");
+            return;
+        }
+    }
+    </script>
+</body>
+</html>

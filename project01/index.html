@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>답십리동 소개</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="normalize2.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="subject" content="답십리동 소개(Dapsimni Intro)" />
+    <meta name="description" content="답십리동, 맛집, 카페, 교육, 의료" />
+    <meta name="keywords" content="답십리동, 맛집, 카페, 교육, 의료" />
+    <link rel="icon" href="./img/favicon3.png" />
+    <link rel="shortcut icon" href="./img/favicon3.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="dapsimnidong" />
+    <meta property="og:description" content="답십리동, 맛집, 카페, 교육, 의료" />
+    <meta property="og:image" content="${ipath }/images/site.png" />
+    <meta property="og:url" content="http://localhost:8091" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <style>
+    .nanum-pen-script-regular {
+    font-family: "Nanum Pen Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+    }
+    </style>
+
+    <style>
+    /* 페이지1~2 */
+    #contents { width: 100%; background-color: rgba(236,255,204,0.6); }
+    .page { clear:both; width: 100%; min-height:80vh; background-color: #FBE5CC; border-top: 4px solid #AE7642; }
+    .page:after { content:""; display:block; width:100%; clear:both; }
+    .page_title { text-align: center; padding-top: 2em; padding-bottom: 0.5em; }
+    .page_wrap { clear:both; width: 1200px; height: 80vh; margin: 0 auto; border-left: 1px solid #AE7642; border-right: 1px solid #AE7642; }
+    </style>
+
+    <style>
+    /* 페이지 */
+    #vs { clear:both; width: 1200px; height:495px; overflow:hidden; margin: 0 auto; position: relative; }
+
+    .box {
+    width: 350px;
+    height: 360px;
+    border: 2px solid #000;
+    background-color: #fff;
+    margin-top: 65px; margin-left: 21px; margin-right: 21px;
+    float: left;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5); z-index: 10; }
+
+    #vs #pin1 { width: 50px; height: 50px; z-index: 40; margin-top: -30px; margin-left: 175px; transform: rotate(-15deg); float: left; }
+    #vs #pin2 { width: 50px; height: 50px; z-index: 40; margin-top: -30px; margin-left: 175px; transform: rotate(-15deg); float: left; }
+    #vs #pin3 { width: 50px; height: 50px; z-index: 40; margin-top: -30px; margin-left: 175px; transform: rotate(-15deg); float: left; }
+
+    #vs #img1 { width: 295px; height: 250px; z-index: 20; margin-top: 20px; margin-left: 27.5px; float: left; }
+    #vs #img2 { width: 295px; height: 250px; z-index: 20; margin-top: 20px; margin-left: 27.5px; float: left; }
+    #vs #img3 { width: 295px; height: 250px; z-index: 20; margin-top: 20px; margin-right: 27.5px; float: right; }
+
+    #vs #p1 { font-weight: bold; font-size: 25px; z-index: 15; float: left; margin-left: 92.25px; margin-top: 4px; 
+    font-family: "Nanum Pen Script", cursive; text-align: center; }
+    #vs #p2 { font-weight: bold; font-size: 25px; z-index: 15; float: left; margin-left: 82.547px; margin-top: 4px;
+    font-family: "Nanum Pen Script", cursive; text-align: center; }
+    #vs #p3 { font-weight: bold; font-size: 25px; z-index: 15; float: right; margin-right: 47.4px; margin-top: 4px;
+    font-family: "Nanum Pen Script", cursive; text-align: center; }
+    </style>
+
+    <style>
+    /* 말풍선 */
+    .page_wrap #img4 { width: 500px; height: auto; z-index: 40; transform: rotate(-20deg); 
+    margin-top: 100px; margin-left: 0px; }
+    .speech-bubble {
+    float: right; margin-right: 100px; margin-top: -500px;
+    position: relative;
+    background-color: #E4F0F2;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 12px 0 rgba(0, 0, 0, 0.7);
+    width: 800px; height: 400px;
+    z-index: 45;
+    }
+
+    .speech-bubble::before {
+    z-index: 45;
+    content: '';
+    position: absolute;
+    top: 25%;
+    left: -200px;
+    transform: rotate(90deg);
+    border-width: 100px;
+    height: 10px;
+    border-style: solid;
+    border-color: #E4F0F2 transparent transparent transparent;
+    }
+
+    .speech-bubble #img5 { width: 80px; height: 80px; z-index: 60; margin-left: 50px; margin-top: 15px; }
+    .speech-bubble #plus { position: absolute; width: 60px; height: 60px; z-index: 60; 
+    margin-left: 680px; margin-top: -330px; }
+
+    .check_img1 #img6 { width: 50px; height: 50px; z-index: 61; margin-left: 50px; padding-top: 20px; }
+    .check_img2 #img7 { width: 50px; height: 50px; z-index: 61; margin-left: 50px; margin-top: 40px; }
+    .check_img3 #img8 { width: 50px; height: 50px; z-index: 61; margin-left: 50px; margin-top: 40px; }
+
+    span#p4 { position: absolute; font-weight: bold; font-size: 30px; margin-left: 20px; margin-top: 40px; }
+    span#p5 { position: absolute; font-weight: bold; font-size: 25px; margin-left: 20px; margin-top: 28px; }
+    span#p6 { position: absolute; font-weight: bold; font-size: 25px; margin-left: 20px; margin-top: 49px; }
+    span#p7 { position: absolute; font-weight: bold; font-size: 25px; margin-left: 20px; margin-top: 48px; }
+
+    span#v1 { position: absolute; font-weight: bold; font-size: 25px; margin-left: 500px; margin-top: 28px; }
+    span#v2 { position: absolute; font-weight: bold; font-size: 25px; margin-left: 500px; margin-top: 49px; }
+    span#v3 { position: absolute; font-weight: bold; font-size: 25px; margin-left: 500px; margin-top: 48px; }
+    </style>
+</head>
+<body>
+    <header id="hd" class="clr-fix">
+        <div class="menu_img">
+            <a href="index.html">
+                <img src="./img/logo.png" alt="로고" id="logo">
+            </a>
+            <img src="./img/park.png" alt="지역소개" id="intro">
+            <img src="./img/building2.png" alt="이용안내" id="available">
+            <img src="./img/talk.png" alt="커뮤니티" id="community">
+            <img src="./img/location.png" alt="오시는길" id="location">
+            <img src="./img/setting.png" alt="마이페이지" id="setting">
+        </div>
+        <div class="hd_wrap">
+            <div class="wrap clr-fix">
+                <nav id="gnb3">
+                    <ul class="menu">
+                        <li id="blank">
+                            <p>공백</p>
+                        </li>
+                        <li>
+                            <a href="" class="dp1" id="menu1">지역소개</a>
+                            <ul class="sub">
+                                <li><a href="" class="dp2" id="sub1">지명유래</a></li>
+                                <li><a href="" class="dp2" id="sub1">연혁</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="" class="dp1" id="menu2">이용안내</a>
+                            <ul class="sub">
+                                <li><a href="" class="dp2" id="sub2">교통편 안내</a></li>
+                                <li><a href="facility.html" class="dp2" id="sub2">주요 시설 안내</a></li>
+                                <li><a href="" class="dp2" id="sub2">먹거리 안내</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="" class="dp1" id="menu3">커뮤니티</a>
+                            <ul class="sub">
+                                <li><a href="notice.html" class="dp2" id="sub3">공지사항</a></li>
+                                <li><a href="" class="dp2" id="sub3">묻고 답하기</a></li>
+                                <li><a href="" class="dp2" id="sub3">자료실</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="" class="dp1" id="menu4">오시는 길</a>
+                        </li>
+                        <li>
+                            <a href="" class="dp1" id="menu5">마이페이지</a>
+                            <ul class="sub">
+                                <li><a href="" class="dp2" id="sub5">로그인</a></li>
+                                <li><a href="term.html" class="dp2" id="sub5">회원가입</a></li>
+                                <li><a href="" class="dp2" id="sub5">회원약관</a></li>
+                                <li><a href="" class="dp2" id="sub5">개인정보처리방침</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main id="contents" class="clr-fix">
+        <figure id="vs">
+            <div class="box" id="box1">
+                <ul>
+                    <li><img src="./img/pin.png" alt="핀" id="pin1"></li>
+                </ul>
+                <ul>
+                    <li><img src="./img/market_img.jpg" alt="경동시장" id="img1"></li>
+                </ul>
+                <ul>
+                    <li><span id="p1">2023. 09. 11 <br>과일을 사러 경동시장에!</span></li>
+                </ul>
+            </div>
+            <div class="box" id="box2">
+                <ul>
+                    <li><img src="./img/pin.png" alt="핀" id="pin2"></li>
+                </ul>
+                <ul>
+                    <li><img src="./img/library.jpg" alt="답십리도서관" id="img2"></li>
+                </ul>
+                <ul>
+                    <li><span id="p2">2024. 03. 15 <br>도서관으로 공부하러 가볼까?</span></li>
+                </ul>
+            </div>
+            <div class="box" id="box3">
+                <ul>
+                    <li><img src="./img/pin.png" alt="핀" id="pin3"></li>
+                </ul>
+                <ul>
+                    <li><img src="./img/img2.jpg" alt="청계천" id="img3"></li>
+                </ul>
+                <ul>
+                    <li><span id="p3">2024. 04. 22 <br>청계천에서 시원한 바람을 맞으며...</span></li>
+                </ul>
+            </div>
+        </figure>
+        
+        <section class="page" id="page">
+            <div class="page_wrap">
+                <img src="./img/phone.png" alt="공지" id="img4">
+                <div class="speech-bubble">
+                    <img src="./img/noti.png" alt="공지" id="img5">
+                    <span id="p4">알려드립니다!</span>
+                    <div class="check_img1">
+                        <a href="">
+                            <img src="./img/checkbox.png" alt="공지" id="img6">
+                            <span id="p5">여섯 번째 공지입니다~!</span>
+                            <span id="v1">2024-04-21</span>
+                        </a>
+                    </div>
+                    <div class="check_img2">
+                        <a href="">
+                            <img src="./img/checkbox.png" alt="공지" id="img7">
+                            <span id="p6">다섯 번째 공지입니다~!</span>
+                            <span id="v2">2024-03-30</span>
+                        </a>
+                    </div>
+                    <div class="check_img3">
+                        <a href="">
+                            <img src="./img/checkbox.png" alt="공지" id="img8">
+                            <span id="p7">네 번째 공지입니다.</span>
+                            <span id="v3">2024-03-15</span>
+                        </a>
+                    </div>
+                    <a href="notice.html">
+                        <img src="./img/plus.png" alt="더보기" id="plus">
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="ft" class="clr-fix">
+        <div class="ft_wrap">
+            <nav id="fnb">
+                <ul class="fl">
+                    <li><a href="">회원약관</a></li>
+                    <li><a href="">개인정보처리방침</a></li>
+                </ul>
+                <ul class="fr">
+                    <li><a href="https://www.ddm.go.kr/www/index.do">동대문구청</a></li>
+                    <li><a href="https://www.ddm.go.kr/health/index.do">동대문구 보건소</a></li>
+                    <li><a href="https://www.smpa.go.kr/home/homeIndex.do?menuCode=ddm">서울 동대문경찰서</a></li>
+                </ul>
+                <ul class="copy">
+                    
+                    <li class="tel">
+                        대표전화 : 02-2127-4114, 4300, 5000(120 다산콜센터로 연결) | 02-2127-4000(야간, 공휴일/당직실), FAX : 02-2127-5096
+                    </li>
+                    <li class="addr">[02565]서울시 동대문구 천호대로 145(용두동) 답십리동 소개</li>
+                    <li class="copyright">COPYRIGHT(C) SEOUL DAPSIMNI INTRO. ALL RIGHTS RESERVED.</li>
+                    
+                </ul>
+            </nav>
+            <hr>
+            <!--
+            <div class="copy">
+                <p class="copyright">COPYRIGHT(C) SEOUL DAPSIMNI INTRO. ALL RIGHTS RESERVED.</p>
+                <p class="addr">[02565]서울시 동대문구 천호대로 145(용두동) 답십리동 소개</p>
+                <p class="tel">대표전화 : 02-2127-4114, 4300, 5000(120 다산콜센터로 연결) | 02-2127-4000(야간, 공휴일/당직실), FAX : 02-2127-5096
+                    <a href="https://www.google.com/maps/search/%EA%B0%80%EC%82%B0%EB%8F%99+128-14+%EC%A7%80%EB%8F%84?entry=ttu" target="_blank">오시는 길</a>
+                </p>
+            </div>
+            -->
+        </div>
+    </footer>
+</body>
+</html>
