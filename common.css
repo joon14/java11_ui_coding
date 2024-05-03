@@ -23,7 +23,7 @@ a { text-decoration: none; color: #000; }
 #gnb3 > .menu > li { float:left; width: 200px; text-align: center; }
 #gnb3 li#blank { width:200px; }
 #gnb3 p { width: 200px; line-height: 70px; background-color:#AE7642; color:#AE7642; }
-/*#gnb3 p { width: 1903px; line-height: 70px; background-color:#AE7642; color:#AE7642; margin-left: -350px; margin-right:-350px; }*//*다 만들고 주석삭제*/
+#gnb3 p { width: 5000px; line-height: 70px; background-color:#AE7642; color:#AE7642; margin-left: -350px; margin-right:-350px; }/*다 만들고 주석삭제*/
 #gnb3 a { font-weight: bold; }
 #gnb3 a.dp1 { background-color: #AE7642; color:#fff; display:block; line-height: 70px; font-size: 20px; }
 #gnb3 .sub { display:none; }
